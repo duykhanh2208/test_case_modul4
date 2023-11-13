@@ -1,7 +1,7 @@
 function showlist(){
     axios.get("http://localhost:8080/api/staffs").then((data) => {
         let content = "";
-        content += `<table>
+        content += `<table style="width: 100%">
                 <tr>
                  <td class="td">Stt</td>
                  <td class="td">Tên nhân viên</td>
@@ -47,7 +47,7 @@ function search() {
     axios.post(`http://localhost:8080/api/staffs/search`, staff).then((data) => {
         let staff = data.data;
         let content = "";
-        content += `<table>
+        content += `<table style="width: 100%>
                 <tr>
                  <td class="td">Stt</td>
                  <td class="td">Tên nhân viên</td>
@@ -76,7 +76,7 @@ function sortI(){
     axios.get(`http://localhost:8080/api/staffs/sortI`).then((data) => {
         let staff = data.data;
         let content = "";
-        content += `<table>
+        content += `<table style="width: 100%>
                 <tr>
                  <td class="td">Stt</td>
                  <td class="td">Tên nhân viên</td>
@@ -105,7 +105,7 @@ function sortD(){
     axios.get(`http://localhost:8080/api/staffs/sortD`).then((data) => {
         let staff = data.data;
         let content = "";
-        content += `<table>
+        content += `<table style="width: 100%>
                 <tr>
                  <td class="td">Stt</td>
                  <td class="td">Tên nhân viên</td>
