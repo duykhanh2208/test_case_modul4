@@ -133,18 +133,19 @@ function viewDetail(id) {
     axios.get(`http://localhost:8080/api/staffs/${id}`).then((data) => {
         let staff = data.data;
         let content = "";
-        content += `<table>
-<tr><td rowspan="4"><image style="width: 600px; height: 600px" src="https://www.ikanins.com/wp-content/uploads/2021/04/www.ikanins.com-a-de-o-vsbg-link-vsbg.link-134080270-416626806323572-1923104787420654933-n.jpg"></image></td>
-<td style="margin: 30px; align-content: center; text-align: center">${staff.name}</td>
+        content += `<table border="1 solid">
+<tr>
+    <td rowspan="4" ><image style="width: 600px; height: 600px" src="https://www.ikanins.com/wp-content/uploads/2021/04/www.ikanins.com-a-de-o-vsbg-link-vsbg.link-134080270-416626806323572-1923104787420654933-n.jpg"></image></td>
+    <td style="width: 50%; margin: 30px; align-content: center; text-align: center">${staff.name}</td>
 </tr>
 <tr>
-<td style="margin: 30px; align-content: center; text-align: center">${staff.age}</td>
+    <td style="margin: 30px; align-content: center; text-align: center">${staff.age}</td>
 </tr>
 <tr>
-<tdstyle="margin: 30px; align-content: center; text-align: center">${staff.salary}</td>
+    <td style="margin: 30px; align-content: center; text-align: center">${staff.salary}</td>
 </tr>
 <tr>
-<td style="margin: 30px; align-content: center; text-align: center">${staff.department.name}</td>
+    <td style="margin: 30px; align-content: center; text-align: center">${staff.department.name}</td>
 </tr>
 </table>
  `
